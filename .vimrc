@@ -1,4 +1,6 @@
 ""Установка плагинов: :PlugInstall
+""Для работы устанавливаем vimPlug: curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+""    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin('~/.vim/plugged')
 
@@ -15,7 +17,7 @@ set modifiable
 set hlsearch
 set incsearch
 
-"Всё, что связано с темами
+"Внешний вид
 set background=dark
 colorscheme sublimemonokai
 set number "установка нумерации строк
@@ -31,30 +33,23 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" Вырубаем .swp и ~ (резервные) файлы
+" Выключаем .swp и ~ (резервные) файлы
 set nobackup
 set noswapfile
 set encoding=utf-8 " Кодировка файлов по умолчанию
 set fileencodings=utf8,cp1251
 
 "Синтаксис 
-"Подсвечиваем все что можно подсвечивать
-
 syntax on
-let python_highlight_all = 1
 
 " Включаем 256 цветов в терминале
-
 set t_Co=256
 
 "В .py файлах включаем умные отступы после ключевых слов
-
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 "mappings
-
 map <C-l> :NERDTreeToggle<CR>
-
 
 "let
 "letAirline
